@@ -9,8 +9,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Center(
-        child: Container(width: 50, height: 50, color: Colors.blue),
+      home:Scaffold(
+        appBar: AppBar(
+          title:Text('App'),
+          elevation: 15.0,
+        ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children:[
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+          ],
+        ),
+        bottomNavigationBar: BottomAppBar( child: Text('aaabb')),
       )
     );
   }
