@@ -17,12 +17,24 @@ class MyApp extends StatelessWidget {
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children:[
-            Icon(Icons.star),
-            Icon(Icons.star),
-            Icon(Icons.star),
+            Text('App'),
+            Icon(Icons.mail)
           ],
         ),
-        bottomNavigationBar: BottomAppBar( child: Text('aaabb')),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            color: Colors.grey,
+            height: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children:[
+                Icon(Icons.phone),
+                Icon(Icons.mail),
+                Icon(Icons.contact_page)
+              ],
+            ),,
+          ),
+        )
       )
     );
   }
