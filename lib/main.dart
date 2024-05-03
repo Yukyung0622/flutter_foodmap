@@ -1,42 +1,35 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+void main() => runApp(MyApp());
 
+class MyApp extends StatefulWidget {
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:Scaffold(
-        appBar: AppBar(
-          title:Text('App'),
-          elevation: 15.0,
-        ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children:[
-            Text('App'),
-            Icon(Icons.mail)
-          ],
-        ),
-        bottomNavigationBar: BottomAppBar(
-          child: Container(
-            color: Colors.grey,
-            height: 60,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children:[
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page)
-              ],
+      return MaterialApp(title: 'YuFlix',
+      theme: ThemeData(
+          brightness : Brightness.dark,
+          primaryColor: Colors.black,
+          accentColor: Colors.white,
+      ),
+        home: DefaultTabController(
+            length:4,
+            child: Scaffold(
+              body: TabBarView(
+                physics: NeverScrollableScrollPhysics(),
+                children:<Widget>[
+                    Container(),
+                    Container(),
+                    Container(),
+                    Container(),
+                ],
+              ),
+              bottomNavigationBar: BottomBar,
             ),
-          ),
-        )
-      )
-    );
+        ),
+      );
   }
 }
-
