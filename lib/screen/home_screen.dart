@@ -1,3 +1,4 @@
+import 'package:contact/model/model_movie.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -5,6 +6,16 @@ class HomeScreen extends StatefulWidget{
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Movie> movies = [
+    Movie.fromMap(
+        {
+          'title' : '눈물의 여왕',
+          'keyword' : '사랑/로맨스',
+          'poster' : 'tearpost.jpg',
+          'like' : false
+        }
+    )
+  ];
   @override
   void initState() {
     super.initState();
