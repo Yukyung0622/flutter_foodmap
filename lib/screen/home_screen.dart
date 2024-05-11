@@ -15,7 +15,31 @@ class _HomeScreenState extends State<HomeScreen> {
           'poster' : 'tearpost.jpg',
           'like' : false
         }
-    )
+    ),
+    Movie.fromMap(
+        {
+          'title' : '눈물의 여왕',
+          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'poster' : '11.jpg',
+          'like' : false
+        }
+    ),
+    Movie.fromMap(
+        {
+          'title' : '눈물의 여왕',
+          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'poster' : '12.jpg',
+          'like' : false
+        }
+    ),
+    Movie.fromMap(
+        {
+          'title' : '눈물의 여왕',
+          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'poster' : 'king.jpg',
+          'like' : false
+        }
+    ),
   ];
   @override
   void initState() {

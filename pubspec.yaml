@@ -57,6 +57,9 @@ flutter:
   assets:
     - images/netflixlogoicon.png
     - images/tearpost.jpg
+    - images/11.jpg
+    - images/12.jpg
+    - images/king.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
