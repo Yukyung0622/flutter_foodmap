@@ -18,24 +18,24 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
     Movie.fromMap(
         {
-          'title' : '눈물의 여왕',
-          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'title' : '그해 우리는',
+          'keyword' : '사랑/로맨틱 코미디',
           'poster' : '11.jpg',
           'like' : false
         }
     ),
     Movie.fromMap(
         {
-          'title' : '눈물의 여왕',
-          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'title' : '마이데몬',
+          'keyword' : '스릴러/로맨틱 코미디/가족',
           'poster' : '12.jpg',
           'like' : false
         }
     ),
     Movie.fromMap(
         {
-          'title' : '눈물의 여왕',
-          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'title' : '킹덤',
+          'keyword' : '좀비/스릴러/공포/판타지',
           'poster' : 'king.jpg',
           'like' : false
         }
