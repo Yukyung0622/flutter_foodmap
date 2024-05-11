@@ -4,8 +4,8 @@ import 'package:contact/model/model_movie.dart';
 
 
 class CarouselImage extends StatefulWidget {
-  final List<Movie> movies;
-  CarouselImage({this.movies});
+  final List<Movie> movies ;
+  CarouselImage({required this.movies}) ;
   _CarouselImageState createState() => _CarouselImageState();
 }
 
@@ -32,17 +32,17 @@ class _CarouselImageState extends State<CarouselImage> {
     return Container(
       child: Column(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(20),
-          ),
           CarouselSlider(
-            items: items,
-            onPageChanged: (index) {
+            items: images,
+            options: CarouselOptions (onPageChanged: (index, reason) {
               setState(() {
                 _crrentPage = index;
-                _crrentKeyword = keywords[_crrentPage]
+                _crrentKeyword = keywords[_crrentPage];
               });
-            },
+            }),
+          ),
+          Container(
+            padding: EdgeInsets.all(20),
           ),
           Container(
             child: Text(_crrentKeyword),

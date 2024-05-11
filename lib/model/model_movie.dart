@@ -4,7 +4,7 @@ class Movie {
   final String poster;
   final bool like;
 
-  movie.fromMap(Map<String, dynamic> map)
+  Movie.fromMap(Map<String, dynamic> map)
   : title = map['title'],
     keyword = map['keyword'],
     poster = map['poster'],

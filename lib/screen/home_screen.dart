@@ -11,7 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Movie.fromMap(
         {
           'title' : '눈물의 여왕',
-          'keyword' : '사랑/로맨스',
+          'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
           'poster' : 'tearpost.jpg',
           'like' : false
         }
