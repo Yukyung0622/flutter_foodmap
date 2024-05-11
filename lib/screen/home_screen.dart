@@ -48,7 +48,7 @@ class TopBar extends StatelessWidget{
         Image.asset(
           'images/netflixlogoicon.png',
           fit: BoxFit.contain,
-          height: 25,
+          height: 20,
           ),
           Container(
             padding: EdgeInsets.only(right: 1),
