@@ -44,9 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
     Movie.fromMap(
         {
-          'title' : '그해 우리는',
-          'keyword' : '사랑/로맨틱 코미디',
-          'poster' : '11.jpg',
+          'title' : '1988 응답하라',
+          'keyword' : '사랑/로맨틱 코미디/가족',
+          'poster' : '1988.jpg',
           'like' : false
         }
     ),
