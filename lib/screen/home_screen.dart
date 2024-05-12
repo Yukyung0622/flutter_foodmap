@@ -1,5 +1,7 @@
 import 'package:contact/model/model_movie.dart';
+import 'package:contact/widget/box_slider.dart';
 import 'package:contact/widget/carousel_slider.dart';
+import 'package:contact/widget/circle_slider.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -40,6 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
           'like' : false
         }
     ),
+    Movie.fromMap(
+        {
+          'title' : '그해 우리는',
+          'keyword' : '사랑/로맨틱 코미디',
+          'poster' : '11.jpg',
+          'like' : false
+        }
+    ),
   ];
   @override
   void initState() {
@@ -55,7 +65,9 @@ class _HomeScreenState extends State<HomeScreen> {
             CarouselImage(movies: movies),
             TopBar(),
           ],
-        )
+        ),
+        CircleSlider(movies: movies),
+        BoxSlider(movies: movies),
       ],
     );
   }
