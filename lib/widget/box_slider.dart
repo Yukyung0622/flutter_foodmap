@@ -1,3 +1,4 @@
+import 'package:contact/screen/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/model/model_movie.dart';
 
@@ -16,7 +17,7 @@ class BoxSlider extends StatelessWidget {
             height: 120,
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: makeBoxImages(movies),
+              children: makeBoxImages(context, movies),
             ),
           )
         ],
@@ -25,11 +26,19 @@ class BoxSlider extends StatelessWidget {
   }
 }
 
-List<Widget> makeBoxImages(List<Movie> movies) {
+List<Widget> makeBoxImages(BuildContext context, List<Movie> movies) {
   List<Widget> result = [];
   for (var i = 0; i < movies.length; i++){
     result.add(InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute<Null>(
+            fullscreenDialog: true,
+            builder:(BuildContext context) {
+              return DetailScreen(
+                movie: movies[i],
+              );
+            }));
+      },
       child: Container(
         padding: EdgeInsets.only(right: 10),
         child: Align(

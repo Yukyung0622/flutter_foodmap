@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         {
           'title' : '그해 우리는',
           'keyword' : '사랑/로맨틱 코미디',
+          'cast' : '최우식, 김다미, 김성철, 노정의, 박진주',
           'poster' : '11.jpg',
           'like' : false
         }
@@ -31,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         {
           'title' : '마이데몬',
           'keyword' : '스릴러/로맨틱 코미디/가족',
+          'cast' : '김유정, 송강, 이상이, 김해숙, 조혜주',
           'poster' : '12.jpg',
           'like' : false
         }
@@ -39,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         {
           'title' : '킹덤',
           'keyword' : '좀비/스릴러/공포/판타지',
+          'cast' : '주지훈, 배두나, 류승룡, 김상호, 허준호',
           'poster' : 'king.jpg',
           'like' : false
         }
@@ -47,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         {
           'title' : '1988 응답하라',
           'keyword' : '사랑/로맨틱 코미디/가족',
+          'cast' : '류준열, 혜리, 고경표, 박보검, 이동휘',
           'poster' : '1988.jpg',
           'like' : false
         }
