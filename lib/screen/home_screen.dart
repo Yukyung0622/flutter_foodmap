@@ -14,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
         {
           'title' : '눈물의 여왕',
           'keyword' : '사랑/로맨틱 코미디/가족/휴먼',
+          'cast' : '김수현, 김지원, 박성훈, 곽동현, 이주빈',
           'poster' : 'tearpost.jpg',
           'like' : false
         }
