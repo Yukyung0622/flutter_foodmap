@@ -34,8 +34,22 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('test title'),
       ),
-      body: Center(
-        child: Text('hello world'),
+      body: Container(
+        alignment: Alignment.center, //정렬
+        child: Column(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.yellow,
+            ), //child 는 1개 children 여러개
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.greenAccent,
+            ),
+          ],
+        ), //열과 행
       ),
     );
   }
