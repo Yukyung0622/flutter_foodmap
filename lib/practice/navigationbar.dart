@@ -63,15 +63,21 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         labelColor: Colors.black,
         tabs: [
           Tab(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              _selectedIndex == 0 ? Icons.person : Icons.person_2_outlined,
+            ),
             text: 'Friends',
           ),
           Tab(
-            icon: Icon(Icons.chat),
+            icon: Icon(
+              _selectedIndex == 1 ? Icons.chat : Icons.chat_outlined,
+            ),
             text: 'Chats',
           ),
           Tab(
-            icon: Icon(Icons.settings),
+            icon: Icon(
+              _selectedIndex == 2 ? Icons.settings : Icons.settings_outlined,
+            ),
             text: 'Settings',
             ),
           ],
