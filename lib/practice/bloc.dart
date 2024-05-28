@@ -1,5 +1,8 @@
 import 'package:contact/main.dart';
+import 'package:contact/practice/provider/album_provider.dart';
+import 'package:contact/practice/view/album_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main(){
   runApp(const MyApp() as Widget);
@@ -30,11 +33,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('test title'),
-      ),
-      body: Container(),
+    return MaterialApp(
+      home:ChangeNotifierProvider<AlbumProvider>(
+        create: (context) => AlbumProvider(), child: const AlbumView(),
+      )
     );
   }
 }
