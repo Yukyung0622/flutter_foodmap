@@ -16,8 +16,12 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 # Flutter
 # flutter_foodmap
+<<<<<<< HEAD
 # flutter_foodmap
 # flutter_foodmap
 # flutter_foodmap
 # flutter_foodmap
+# flutter_foodmap
+=======
+>>>>>>> 8cab20a364120591bda93f2063d51ffa38a8cfb5
 # flutter_foodmap
