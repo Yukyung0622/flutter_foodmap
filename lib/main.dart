@@ -1,33 +1,19 @@
+import 'package:contact/login/loginpage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
+void main(){
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Food Delivery UI',
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          brightness : Brightness.dark,
-          primaryColor: Colors.black,
-          hintColor: Colors.white,
-      ),
-        home: DefaultTabController(
-            length:4,
-            child: Scaffold(
-              body: TabBarView(
-                physics: NeverScrollableScrollPhysics(),
-                children:<Widget>[
-                    Container(child: Center(child: Text('search'),),),
-                    Container(child: Center(child: Text('save'),),),
-                ],
-              ),
-            ),
-        ),
-      );
+      home:LoginPage(),
+    );
   }
 }

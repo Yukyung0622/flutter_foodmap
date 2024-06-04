@@ -11,8 +11,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MeterialApp(
-      debugShowChckedModeBanner: false,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           margin: const EdgeInsets.all(24),
@@ -94,5 +94,5 @@ _signup(context) {
           child: const Text("Sign Up", style: TextStyle(color: Colors.purple),)
       ),
     ],
-  )
+  );
 }
