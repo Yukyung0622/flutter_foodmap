@@ -11,88 +11,45 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          margin: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _header(context),
-              _inputField(context),
-              _forgotPassword(context),
-              _signup(context),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Center(
+          child:Column(
+            children: const [
+              SizedBox(height: 50),
+        //logo
+              Icon(
+                Icons.lock,
+                size: 100,
+              ),
+              const SizedBox(height: 50),
+        //로그인해주세요
+              Text(
+                  '로그인 해주세요',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16,
+                ),
+              ),
 
-  _header(context){
-    return const Column(
-      children: [
-        Text(
-            "FoodMap Login",
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-        ),
-        Text(
-            "Delicious meal and space for communication"
-        ),
-      ],
+        //username textfield
+
+        //password textfield
+
+        //forgot password?
+
+        //sigh in button
+
+        //or continue with
+
+        //kakao,google,naver.apple sign in buttons
+
+        //not a member? rgister now
+        ],
+      ),
+      ),
+      ),
     );
   }
-  _inputField(context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        TextField(
-          decoration: InputDecoration(
-            hintText: "Username",
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(18),
-              borderSide: BorderSide.none
-            ),
-            fillColor: Colors.purple.withOpacity(0.1),
-            filled: true,
-            prefixIcon: const Icon(Icons.password),
-          ),
-          obscureText: true,
-        ),
-        const SizedBox(height: 10),
-        ElevatedButton(
-            onPressed: (){},
-            style: ElevatedButton.styleFrom(
-              shape: const StadiumBorder(),
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              backgroundColor: Colors.purple
-            ),
-          child: const Text(
-            "Login",
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
-      ],
-    );
-  }
-}
-_forgotPassword(context){
-  return TextButton(
-      onPressed: (){},
-      child: const Text("Forgot password?",
-        style: TextStyle(color: Colors.purple),
-      ),
-  );
-}
-_signup(context) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      const Text("Dont have an account?"),
-      TextButton(onPressed: (){},
-          child: const Text("Sign Up", style: TextStyle(color: Colors.purple),)
-      ),
-    ],
-  );
 }
