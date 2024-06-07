@@ -1,3 +1,4 @@
+import 'package:contact/components/my_textfield.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,9 @@ class LoginPage extends StatelessWidget {
           const SizedBox(height: 25),
 
         //username textfield
-              
+              MyTextField(),
+
+              const SizedBox(height: 10),
 
         //password textfield
 
