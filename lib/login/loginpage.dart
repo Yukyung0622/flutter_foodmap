@@ -1,3 +1,4 @@
+import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,9 @@ class LoginPage extends StatelessWidget {
   //text editing controller
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  //sign user in method
+   void signUserIn(){}
 
 
   @override
@@ -55,9 +59,32 @@ class LoginPage extends StatelessWidget {
                 hintText: 'Password',
                 obscureText:true,
               ),
+
+              const SizedBox(height: 10),
+
         //forgot password?
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                          'forgot password?',
+                          style: TextStyle(color:Colors.grey),
+                      ),
+                    ],
+                  ),
+              ),
+
+               const SizedBox(height: 25),
+
 
         //sigh in button
+              MyButton(
+                  onTap: signUserIn,
+              ),
+
+              const SizedBox(height: 25),
 
         //or continue with
 
