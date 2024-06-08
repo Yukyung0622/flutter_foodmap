@@ -7,7 +7,11 @@ void main() {
 }
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+   LoginPage({super.key});
+
+  //text editing controller
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
 
   @override
@@ -37,12 +41,20 @@ class LoginPage extends StatelessWidget {
           const SizedBox(height: 25),
 
         //username textfield
-              MyTextField(),
+              MyTextField(
+                controller: usernameController,
+                hintText: 'Username',
+                obscureText: false,
+              ),
 
               const SizedBox(height: 10),
 
         //password textfield
-
+              MyTextField(
+                controller: passwordController,
+                hintText: 'Password',
+                obscureText:true,
+              ),
         //forgot password?
 
         //sigh in button

@@ -11,13 +11,14 @@ class MyTextField extends StatelessWidget{
     required this.hintText,
     required this.obscureText,
   });
-}
 
   @override
   Widget build(BuildContext context) {
   return Padding(
     padding : const EdgeInsetsDirectional.symmetric(vertical: 25.0),
     child: TextField(
+      controller: controller,
+      obscureText: obscureText,
       decoration: InputDecoration(
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
@@ -27,6 +28,8 @@ class MyTextField extends StatelessWidget{
         ),
         fillColor: Color(0xFFBDBDBD),
         filled :true,
+        hintText: hintText,
+        hintStyle: TextStyle(color: Colors.grey)
       ),
     ),
   );
