@@ -7,15 +7,16 @@ void main() {
   runApp(MyApp());
 }
 
+
 class LoginPage extends StatelessWidget {
-   LoginPage({super.key});
+  LoginPage({super.key});
 
   //text editing controller
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
   //sign user in method
-   void signUserIn(){}
+  void signUserIn() {}
 
 
   @override
@@ -24,27 +25,27 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child:Column(
+          child: Column(
             children: const [
               SizedBox(height: 50),
-        //logo
+              //logo
               Icon(
                 Icons.lock,
                 size: 100,
               ),
               const SizedBox(height: 50),
-        //로그인해주세요
+              //로그인해주세요
               Text(
-                  '로그인 해주세요',
+                '로그인 해주세요',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16,
                 ),
               ),
 
-          const SizedBox(height: 25),
+              const SizedBox(height: 25),
 
-        //username textfield
+              //username textfield
               MyTextField(
                 controller: usernameController,
                 hintText: 'Username',
@@ -53,66 +54,67 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-        //password textfield
+              //password textfield
               MyTextField(
                 controller: passwordController,
                 hintText: 'Password',
-                obscureText:true,
+                obscureText: true,
               ),
 
               const SizedBox(height: 10),
 
-        //forgot password?
+              //forgot password?
               Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                          'forgot password?',
-                          style: TextStyle(color:Colors.grey),
-                      ),
-                    ],
-                  ),
-              ),
-
-               const SizedBox(height: 25),
-
-
-        //sigh in button
-              MyButton(
-                  onTap: signUserIn,
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'forgot password?',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
               ),
 
               const SizedBox(height: 25),
 
-        //or continue with
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child : Row(
-                    children: [
-                      Expanded(
-                          child: Divider(
-                            thickness: 0.5,
-                            color: Colors.grey,
-                          )
-                      ),
-                      Text('Or continue with'),
-                      Expanded(
-                          child: Divider(
-                            thickness: 0.5,
-                            color: Colors.grey,
-                          ),
-                      ),
-                    ],
-                  ),
-              ),
-        //kakao,google,naver.apple sign in buttons
 
-        //not a member? rgister now
-        ],
-      ),
-      ),
+              //sigh in button
+              MyButton(
+                onTap: signUserIn,
+              ),
+
+              const SizedBox(height: 25),
+
+              //or continue with
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Colors.grey,
+                        )
+                    ),
+                    Text('Or continue with'),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //kakao,google,naver.apple sign in buttons
+
+              //not a member? rgister now
+            ],
+          ),
+        ),
       ),
     );
   }
+}
