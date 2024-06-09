@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyTextField extends StatelessWidget{
+class MyTextField extends StatelessWidget {
   final controller;
   final String hintText;
   final bool obscureText;
@@ -14,23 +14,24 @@ class MyTextField extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-  return Padding(
-    padding : const EdgeInsetsDirectional.symmetric(vertical: 25.0),
-    child: TextField(
-      controller: controller,
-      obscureText: obscureText,
-      decoration: InputDecoration(
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+    return Padding(
+      padding: const EdgeInsetsDirectional.symmetric(vertical: 25.0),
+      child: TextField(
+        controller: controller,
+        obscureText: obscureText,
+        decoration: InputDecoration(
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFFEEEEE)),
+            ),
+            fillColor: Color(0xFFBDBDBD),
+            filled: true,
+            hintText: hintText,
+            hintStyle: TextStyle(color: Colors.grey)
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFEEEEE)),
-        ),
-        fillColor: Color(0xFFBDBDBD),
-        filled :true,
-        hintText: hintText,
-        hintStyle: TextStyle(color: Colors.grey)
       ),
-    ),
-  );
+    );
   }
+}
