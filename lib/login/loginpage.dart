@@ -1,5 +1,6 @@
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
+import 'package:contact/components/square_tile.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,7 @@ class LoginPage extends StatelessWidget {
                 onTap: signUserIn,
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 50),
 
               //or continue with
               Padding(
@@ -98,7 +99,13 @@ class LoginPage extends StatelessWidget {
                           color: Colors.grey,
                         )
                     ),
-                    Text('Or continue with'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Text(
+                          'Or continue with',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ),
                     Expanded(
                       child: Divider(
                         thickness: 0.5,
@@ -108,9 +115,42 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
+
+              const SizedBox(height: 50),
+
               //kakao,google,naver.apple sign in buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const[
+                  SquareTile(imagePath: 'images/apple.png'),
+                  
+                  SizedBox(width: 25),
+                  
+                  SquareTile(imagePath: 'images/kakao.png')
+                ],
+              ),
+
+              const SizedBox(height: 50),
 
               //not a member? rgister now
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Not a member?',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  const SizedBox(width: 4),
+                  const Text(
+                    'Register now',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+
             ],
           ),
         ),
