@@ -28,6 +28,7 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
+          child:SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -165,6 +166,7 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }
