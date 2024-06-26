@@ -38,6 +38,7 @@ class LoginPage extends StatelessWidget {
                 Icons.lock,
                 size: 100,
               ),
+
               SizedBox(height: 50),
               //로그인해주세요
               Text(
