@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
               //username textfield
               MyTextField(
                 controller: usernameController,
-                hintText: '아이디',
+                hintText: 'Email',
                 obscureText: false,
               ),
 
@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
               //password textfield
               MyTextField(
                 controller: passwordController,
-                hintText: '비밀번호',
+                hintText: 'Password',
                 obscureText: true,
               ),
 
@@ -153,13 +153,15 @@ class LoginPage extends StatelessWidget {
                     'Not a member?',
                     style: TextStyle(color: Colors.grey),
                   ),
-                  SizedBox(width: 4),
-                  Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
+                  GestureDetector(
+                    onTap: (){},
+                    child: const Text(
+                      'Register now',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
                     ),
+                  )
                   ),
                 ],
               ),

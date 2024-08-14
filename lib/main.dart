@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    var darkMode;
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
       theme: lightMode,
+      darkTheme: darkMode,
     );
   }
 }
