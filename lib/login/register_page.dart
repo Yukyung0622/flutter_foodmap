@@ -20,8 +20,8 @@ class RegisterPage extends StatelessWidget {
   final passwordController = TextEditingController();
   final confirmPwController = TextEditingController();
 
-  //sign user in method
-  void signUserIn() {}
+  //register method
+  void register() {}
 
 
   @override
@@ -56,6 +56,13 @@ class RegisterPage extends StatelessWidget {
                 //username textfield
                 MyTextField(
                   controller: usernameController,
+                  hintText: 'Username',
+                  obscureText: false,
+                ),
+
+                //email textfield
+                MyTextField(
+                  controller: emailController,
                   hintText: 'Email',
                   obscureText: false,
                 ),
@@ -66,6 +73,13 @@ class RegisterPage extends StatelessWidget {
                 MyTextField(
                   controller: passwordController,
                   hintText: 'Password',
+                  obscureText: true,
+                ),
+
+                //password textfield
+                MyTextField(
+                  controller: confirmPwController,
+                  hintText: 'Confirm Password',
                   obscureText: true,
                 ),
 
@@ -90,7 +104,7 @@ class RegisterPage extends StatelessWidget {
 
                 //sigh in button
                 MyButton(
-                  onTap: signUserIn,
+                  onTap: register,
                 ),
 
                 SizedBox(height: 30),
@@ -152,13 +166,13 @@ class RegisterPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a member?',
+                      'Already have an acoount?',
                       style: TextStyle(color: Colors.grey),
                     ),
                     GestureDetector(
                         onTap: (){},
                         child: const Text(
-                          'Register now',
+                          'Login Here',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
