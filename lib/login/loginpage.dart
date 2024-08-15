@@ -32,14 +32,14 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 50),
+              SizedBox(height: 30),
               //logo
               Icon(
                 Icons.lock,
-                size: 100,
+                size: 80,
               ),
 
-              SizedBox(height: 50),
+              SizedBox(height: 10),
               //로그인해주세요
               Text(
                 '로그인 해주세요',

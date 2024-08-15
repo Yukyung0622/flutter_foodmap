@@ -34,24 +34,24 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 //logo
                 Icon(
-                  Icons.lock,
-                  size: 100,
+                  Icons.lock_open,
+                  size: 80,
                 ),
 
-                SizedBox(height: 50),
+                SizedBox(height: 10),
                 //로그인해주세요
                 Text(
-                  '로그인 해주세요',
+                  '회원가입',
                   style: TextStyle(
                     color: Colors.grey,
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
                 ),
 
-                SizedBox(height: 25),
+                const SizedBox(height: 1),
 
                 //username textfield
                 MyTextField(
@@ -60,6 +60,8 @@ class RegisterPage extends StatelessWidget {
                   obscureText: false,
                 ),
 
+                const SizedBox(height: 1),
+
                 //email textfield
                 MyTextField(
                   controller: emailController,
@@ -67,7 +69,7 @@ class RegisterPage extends StatelessWidget {
                   obscureText: false,
                 ),
 
-                SizedBox(height: 10),
+                const SizedBox(height: 1),
 
                 //password textfield
                 MyTextField(
@@ -76,6 +78,8 @@ class RegisterPage extends StatelessWidget {
                   obscureText: true,
                 ),
 
+                SizedBox(height: 1),
+
                 //password textfield
                 MyTextField(
                   controller: confirmPwController,
@@ -83,11 +87,11 @@ class RegisterPage extends StatelessWidget {
                   obscureText: true,
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 1),
 
                 //forgot password?
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0),
+                  padding: EdgeInsets.symmetric(horizontal: 5.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -99,15 +103,14 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 25),
-
+                SizedBox(height: 20),
 
                 //sigh in button
                 MyButton(
                   onTap: register,
                 ),
 
-                SizedBox(height: 30),
+                SizedBox(height: 10),
 
                 //or continue with
                 Padding(
