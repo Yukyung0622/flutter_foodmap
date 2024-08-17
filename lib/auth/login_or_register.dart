@@ -17,7 +17,7 @@ class _LoginOrRegister extends State<LoginOrRegister> {
   //toggle between login and register page
   void togglePages(){
     setState(() {
-      showLoginPage = !showLoignPage;
+      showLoignPage = !showLoignPage;
     });
   }
 
