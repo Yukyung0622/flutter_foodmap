@@ -9,7 +9,7 @@ class LoginOrRegister extends StatelessWidget {
   State<LoginOrRegister> creatsState() => _LoginOrRegisterState();
 }
 
-class LoginOrRegister extends State<LoginOrRegister> {
+class LoginOrRegister extends State< LoginOrRegister> {
 
   //initially, show login page
   bool showLoignPage = true;
