@@ -1,15 +1,12 @@
 import 'package:contact/login/loginpage.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class LoginOrRegister extends StatelessWidget {
   const LoginOrRegister({super.key});
-
-
+  
   @override
   State<LoginOrRegister> creatsState() => _LoginOrRegisterState();
 }
-
-class LoginOrRegister extends State< LoginOrRegister> {
 
   //initially, show login page
   bool showLoignPage = true;
@@ -29,4 +26,5 @@ class LoginOrRegister extends State< LoginOrRegister> {
       return RegisterPage(onTap: togglePages);
     }
   }
+}
 }
