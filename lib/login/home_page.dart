@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget{
   //   FirebaseAuth.instance.signOut();
   // }
 
-  void main() {
+  void logout() {
     runApp(MyApp());
   }
 
