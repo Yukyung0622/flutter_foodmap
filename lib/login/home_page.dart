@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../main.dart';
 
 class HomePage extends StatelessWidget{
@@ -19,16 +17,17 @@ class HomePage extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text("Home"),
-        backgroundColor: Colors.black,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions:[
           //logout button
-          // IconButton(
-          //   onPressed: logout,
-          //   icon: Icon(Icons.logout),
-          // )
+          IconButton(
+            onPressed: logout,
+            icon: Icon(Icons.logout),
+          )
         ]
 
       ),
-    )
+      drawer: Drawer(),
+    );
   }
 }
