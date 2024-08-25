@@ -10,8 +10,27 @@ class MyDrawer extends StatelessWidget{
       child: Column(
         children: [
           DrawerHeader(
+            child: Icon(
+              Icons.favorite,
+              color: Theme.of(context).colorScheme.inversePrimary,
+            ),
+          ),
 
-          )
+          const SizedBox(height: 25),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              title: Text("Home"),
+              onTap: (){
+                Navigator.pop(context);
+              },
+            ),
+          ),
         ],
       ),
     )

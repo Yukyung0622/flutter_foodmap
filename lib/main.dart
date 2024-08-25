@@ -4,6 +4,8 @@ import 'package:contact/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/theme/dark_mode.dart';
 
+import 'login/home_page.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget{
     var darkMode;
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegisterPage(),
+      home: HomePage(),
       theme: lightMode,
       darkTheme: darkMode,
     );
