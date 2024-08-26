@@ -31,6 +31,20 @@ class MyDrawer extends StatelessWidget{
               },
             ),
           ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              title: Text("users"),
+              onTap: (){
+                Navigator.pop(context);
+              },
+            ),
+          ),
         ],
       ),
     )
