@@ -36,7 +36,7 @@ class MyDrawer extends StatelessWidget{
             padding: const EdgeInsets.only(left: 25.0),
             child: ListTile(
               leading: Icon(
-                Icons.home,
+                Icons.person,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
               title: Text("users"),
