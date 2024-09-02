@@ -28,5 +28,4 @@ class LoginOrRegister extends StatelessWidget {
       return RegisterPage(onTap: togglePages);
     }
   }
-}
-}
+

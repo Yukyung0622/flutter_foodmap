@@ -27,7 +27,7 @@ class MyDrawer extends StatelessWidget{
                   Icons.home,
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
-                title: Text("My Map"),
+                title: Text("home"),
                 onTap: (){
                   Navigator.pop(context);
                 },
@@ -41,9 +41,12 @@ class MyDrawer extends StatelessWidget{
                   Icons.group,
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
-                title: Text("users"),
+                title: const Text("users"),
                 onTap: (){
                   Navigator.pop(context);
+
+                  //navigate to map page
+                  Navigator.pushNamed(context, '/users_page');
                 },
               ),
             ),
@@ -55,9 +58,12 @@ class MyDrawer extends StatelessWidget{
                   Icons.map,
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
-                title: Text("map"),
+                title: const Text("map"),
                 onTap: (){
                   Navigator.pop(context);
+
+                  //navigate to map page
+                  Navigator.pushNamed(context, '/map_page');
                 },
               ),
             ),

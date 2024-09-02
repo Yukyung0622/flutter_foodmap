@@ -1,10 +1,10 @@
-import 'package:contact/login/loginpage.dart';
-import 'package:contact/login/register_page.dart';
+import 'package:contact/auth/login_or_register.dart';
+import 'package:contact/pages/home_page.dart';
+import 'package:contact/pages/map_page.dart';
+import 'package:contact/pages/users_page.dart';
 import 'package:contact/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/theme/dark_mode.dart';
-
-import 'login/home_page.dart';
 
 void main(){
   runApp(const MyApp());
@@ -18,9 +18,15 @@ class MyApp extends StatelessWidget{
     var darkMode;
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       theme: lightMode,
       darkTheme: darkMode,
+      routes:{
+        '/login_register_page':(context) => const LoginOrRegister(),
+        '/home_page':(context) => const HomePage(),
+        '/map_page':(context) => const MapPage(),
+        '/users_page':(context) => const UsersPage(),
+      }
     );
   }
 }
