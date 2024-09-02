@@ -8,38 +8,70 @@ class MyDrawer extends StatelessWidget{
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.background,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          DrawerHeader(
-            child: Icon(
-              Icons.favorite,
-              color: Theme.of(context).colorScheme.inversePrimary,
-            ),
-          ),
-
-          const SizedBox(height: 25),
-
-          Padding(
-            padding: const EdgeInsets.only(left: 25.0),
-            child: ListTile(
-              leading: Icon(
-                Icons.home,
+          Column(children: [
+            DrawerHeader(
+              child: Icon(
+                Icons.favorite,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
-              title: Text("Home"),
-              onTap: (){
-                Navigator.pop(context);
-              },
             ),
+
+            const SizedBox(height: 25),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.home,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                title: Text("My Map"),
+                onTap: (){
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.group,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                title: Text("users"),
+                onTap: (){
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.map,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                title: Text("map"),
+                onTap: (){
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+            padding: const EdgeInsets.only(left: 25.0, bottom: 25.0),
             child: ListTile(
               leading: Icon(
-                Icons.person,
+                Icons.output_outlined,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
-              title: Text("users"),
+              title: const Text("logout"),
               onTap: (){
                 Navigator.pop(context);
               },
@@ -47,6 +79,6 @@ class MyDrawer extends StatelessWidget{
           ),
         ],
       ),
-    )
+    );
   }
 }

@@ -1,5 +1,7 @@
+import 'package:contact/components/my_drawer.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
+
 
 class HomePage extends StatelessWidget{
   const HomePage ({super.key});
@@ -18,6 +20,7 @@ class HomePage extends StatelessWidget{
       appBar: AppBar(
         title: Text("FoodMap"),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        elevation: 0,
         actions:[
           //logout button
           IconButton(
@@ -27,7 +30,7 @@ class HomePage extends StatelessWidget{
         ]
 
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
