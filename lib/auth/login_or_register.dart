@@ -1,6 +1,6 @@
-import 'package:contact/login/loginpage.dart';
+import 'package:contact/pages/loginpage.dart';
 import 'package:flutter/material.dart';
-import 'package:contact/login/register_page.dart';
+import 'package:contact/pages/register_page.dart';
 
 class LoginOrRegister extends StatelessWidget {
   const LoginOrRegister({super.key});
