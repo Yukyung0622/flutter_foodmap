@@ -4,15 +4,11 @@ import 'package:contact/components/square_tile.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-
-
 
 class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+  final void Function()? onTap;
+
+  LoginPage({super.key, required this.onTap});
 
   //text editing controller
   final usernameController = TextEditingController();
@@ -154,7 +150,7 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.grey),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: onTap,
                     child: const Text(
                       'Register now',
                       style: TextStyle(

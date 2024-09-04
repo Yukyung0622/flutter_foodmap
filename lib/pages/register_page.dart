@@ -12,8 +12,8 @@ void main() {
 
 
 class RegisterPage extends StatelessWidget {
-  RegisterPage({super.key});
-
+  void Function()? onTap;
+  
   //text editing controller
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
@@ -173,7 +173,7 @@ class RegisterPage extends StatelessWidget {
                       style: TextStyle(color: Colors.grey),
                     ),
                     GestureDetector(
-                        onTap: (){},
+                        onTap: onTap,
                         child: const Text(
                           'Login Here',
                           style: TextStyle(

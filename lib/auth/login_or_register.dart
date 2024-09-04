@@ -1,28 +1,28 @@
-import 'package:contact/pages/loginpage.dart';
+import 'package:contact/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/pages/register_page.dart';
 
-class LoginOrRegister extends StatelessWidget {
+class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});
   
   @override
-  State<LoginOrRegister> creatsState() => _LoginOrRegisterState();
+  State<LoginOrRegister> createState() => _LoginOrRegisterState();
 }
 
   //initially, show login page
-  bool showLoignPage = true;
+  bool showLoginPage = true;
 
   //toggle between login and register page
   void togglePages(){
     setState(() {
-      showLoignPage = !showLoignPage;
+      showLoginPage = !showLoginPage;
     });
   }
 
 
   @override
   Widget build(BuildContext context) {
-    if(showLoignPage) {
+    if(showLoginPage) {
       return LoginPage(onTap: togglePages);
     } else{
       return RegisterPage(onTap: togglePages);
