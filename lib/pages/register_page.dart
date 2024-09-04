@@ -4,16 +4,12 @@ import 'package:contact/components/square_tile.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-
-
 
 class RegisterPage extends StatelessWidget {
-  void Function()? onTap;
-  
+  final void Function()? onTap;
+
+  RegisterPage({super.key, required this.onTap});
+
   //text editing controller
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
