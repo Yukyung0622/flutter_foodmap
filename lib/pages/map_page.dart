@@ -5,7 +5,11 @@ class MapPage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Scaffold(appBar: AppBar(title: Text('Map'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Map'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        elevation: 0,
     ),
     );
   }
