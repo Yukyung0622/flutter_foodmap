@@ -11,10 +11,6 @@ class UsersPage extends StatelessWidget{
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         elevation: 0,
     ),
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      body: StreamBuilder(
-        stream: ,
-      ),
     );
   }
 }

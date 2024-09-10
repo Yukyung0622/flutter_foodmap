@@ -1,5 +1,6 @@
 import 'package:contact/auth/login_or_register.dart';
 import 'package:contact/pages/home_page.dart';
+import 'package:contact/pages/login_page.dart';
 import 'package:contact/pages/map_page.dart';
 import 'package:contact/pages/users_page.dart';
 import 'package:contact/theme/light_mode.dart';
