@@ -5,11 +5,15 @@ import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
 
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
-  RegisterPage({super.key, required this.onTap});
+  const RegisterPage({super.key, required this.onTap});
 
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+
+  class _RegisterPageState extends State<RegisterPage>{
   //text editing controller
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
@@ -17,7 +21,12 @@ class RegisterPage extends StatelessWidget {
   final confirmPwController = TextEditingController();
 
   //register method
-  void register() {}
+  void registerUser() {
+    //show loading circle
+    showDialog(context: context, builder: builder)
+    //make sure passwords match
+    //try creating the user
+  }
 
 
   @override
@@ -103,7 +112,7 @@ class RegisterPage extends StatelessWidget {
 
                 //sigh in button
                 MyButton(
-                  onTap: register,
+                  onTap: registerUser,
                 ),
 
                 SizedBox(height: 10),
@@ -187,5 +196,6 @@ class RegisterPage extends StatelessWidget {
         ),
       ),
     );
+   }
   }
 }
