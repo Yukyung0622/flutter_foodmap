@@ -1,4 +1,5 @@
 import 'package:contact/auth/login_or_register.dart';
+import 'package:contact/firebase_options.dart';
 import 'package:contact/pages/home_page.dart';
 import 'package:contact/pages/login_page.dart';
 import 'package:contact/pages/map_page.dart';
@@ -7,7 +8,9 @@ import 'package:contact/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:contact/theme/dark_mode.dart';
 
-void main(){
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(option:DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

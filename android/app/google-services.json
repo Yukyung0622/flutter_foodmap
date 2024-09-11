@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725373217006",
+    "project_id": "fir-map-41f62",
+    "storage_bucket": "fir-map-41f62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725373217006:android:f5efd816000db58d2b2bff",
+        "android_client_info": {
+          "package_name": "com.example.contact"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrW-yx7ts5UOmLi-25TFYsUN-mWovOEIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
