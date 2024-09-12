@@ -1,8 +1,12 @@
+import 'dart:js';
+
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
+
+import '../helper/helper_functions.dart';
 
 
 class RegisterPage extends StatefulWidget {
@@ -21,11 +25,34 @@ class RegisterPage extends StatefulWidget {
   final confirmPwController = TextEditingController();
 
   //register method
-  void registerUser() {
+  void registerUser() async {
     //show loading circle
-    showDialog(context: context, builder: builder)
+    showDialog(
+    context: context,
+    builder: (context) => const Center(
+      child: CircularProgressIndicator(),
+    ),
+  );
     //make sure passwords match
+  if (passwordController.text != confirmPwController) {
+    //pop lodaing circle
+  Navigator.pop(context);
+  //show error message to user
+  displayMessageToUser("비밀번호가 틀렸습니다.", context);
+  }
     //try creating the user
+  try{
+    //create the uwer
+  UserCredential? userCredential = awit FirebaseAuth.instance.createUserWithEmailAndPassword(email:emailController.text, password: passwordController.text);
+  //pop loading circle
+  Navigator.pop(context);
+  } on FirebaseAuthException catch (e) {
+  //pop loading circle
+  Navigator.pop(context);
+
+  //display error message to user
+  displayMessageToUser(e.code, context);
+  }
   }
 
 
