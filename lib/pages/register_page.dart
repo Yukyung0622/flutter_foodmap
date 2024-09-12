@@ -1,11 +1,9 @@
-import 'dart:js';
-
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
 import 'package:contact/main.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
 import '../helper/helper_functions.dart';
 
 
