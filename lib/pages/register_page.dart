@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../helper/helper_functions.dart';
 
 
+
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
@@ -39,13 +40,13 @@ class RegisterPage extends StatefulWidget {
   displayMessageToUser("비밀번호가 틀렸습니다.", context);
   }
     //try creating the user
-  try{
+  try {
     //create the user
-  UserCredential? userCredential =
-    awit FirebaseAuth.instance.createUserWithEmailAndPassword(
-  email:emailController.text,
-  password: passwordController.text
-  );
+    UserCredential? userCredential =
+        awit FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text
+    );
   //pop loading circle
   Navigator.pop(context);
   } on FirebaseAuthException catch (e) {
