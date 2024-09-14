@@ -13,14 +13,14 @@ class RegisterPage extends StatefulWidget {
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
+}
 
-  
   class _RegisterPageState extends State<RegisterPage>{
   //text editing controller
-  final usernameController = TextEditingController();
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-  final confirmPwController = TextEditingController();
+    final TextEditingController usernameController = TextEditingController();
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+    final TextEditingController confirmPwController = TextEditingController();
 
   //register method
   void registerUser() async {
@@ -40,7 +40,7 @@ class RegisterPage extends StatefulWidget {
   }
     //try creating the user
   try{
-    //create the uwer
+    //create the user
   UserCredential? userCredential =
     awit FirebaseAuth.instance.createUserWithEmailAndPassword(
   email:emailController.text,
@@ -227,7 +227,7 @@ class RegisterPage extends StatefulWidget {
     );
    }
   }
-}
+
 
 
 
