@@ -27,35 +27,39 @@ class RegisterPage extends StatefulWidget {
   void registerUser() async {
     //show loading circle
     showDialog(
-    context: context,
-    builder: (context) => const Center(
-      child: CircularProgressIndicator(),
-    ),
-  );
-    //make sure passwords match
-  if (passwordController.text != confirmPwController) {
-    //pop lodaing circle
-  Navigator.pop(context);
-  //show error message to user
-  displayMessageToUser("비밀번호가 틀렸습니다.", context);
-  }
-    //try creating the user
-  try {
-    //create the user
-    UserCredential? userCredential =
-        awit FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text
+      context: context,
+      builder: (context) =>
+      const Center(
+        child: CircularProgressIndicator(),
+      ),
     );
-  //pop loading circle
-  Navigator.pop(context);
-  } on FirebaseAuthException catch (e) {
-  //pop loading circle
-  Navigator.pop(context);
+    //make sure passwords match
+    if (passwordController.text != confirmPwController) {
+      //pop lodaing circle
+      Navigator.pop(context);
+      //show error message to user
+      displayMessageToUser("비밀번호가 틀렸습니다.", context);
+    }
+    //if password do match
+    else {
+      //try creating the user
+      try {
+        //create the user
+        UserCredential? userCredential =
+            awit FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text,
+            password: passwordController.text
+        );
+        //pop loading circle
+        Navigator.pop(context);
+      } on FirebaseAuthException catch (e) {
+        //pop loading circle
+        Navigator.pop(context);
 
-  //display error message to user
-  displayMessageToUser(e.code, context);
-  }
+        //display error message to user
+        displayMessageToUser(e.code, context);
+      }
+    }
   }
 
 
@@ -65,7 +69,7 @@ class RegisterPage extends StatefulWidget {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child:SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -226,7 +230,7 @@ class RegisterPage extends StatefulWidget {
         ),
       ),
     );
-   }
+  }
   }
 
 
