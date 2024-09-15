@@ -45,7 +45,7 @@ class RegisterPage extends StatefulWidget {
       //try creating the user
       try {
         //create the user
-        UserCredential? userCredential =
+        final userCredential =
             awit FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: emailController.text,
             password: passwordController.text
