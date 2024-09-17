@@ -204,6 +204,7 @@ class RegisterPage extends StatefulWidget {
 
                 SizedBox(height: 30),
 
+
                 //not a member? rgister now
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
