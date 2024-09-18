@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget{
     var darkMode;
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const LoginOrRegister(),
       theme: lightMode,
       darkTheme: darkMode,
       routes:{
