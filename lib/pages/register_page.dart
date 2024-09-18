@@ -35,7 +35,7 @@ class RegisterPage extends StatefulWidget {
       ),
     );
     //make sure passwords match
-    if (passwordController.text != confirmPwController) {
+    if (passwordController.text == confirmPwController) {
       //pop lodaing circle
       Navigator.pop(context);
       //show error message to user
