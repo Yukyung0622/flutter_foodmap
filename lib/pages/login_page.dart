@@ -3,7 +3,9 @@ import 'dart:js';
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
+import 'package:contact/helper/helper_functions.dart';
 import 'package:contact/main.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -25,8 +27,24 @@ class LoginPage extends StatelessWidget {
           child: CircularProgressIndicator(),
         )
     );
-    
-    //pop
+
+    //try sign in
+    try{
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text,
+          password: passwordControler.text,
+      );
+
+      //pop loading circle
+      if(context.mounted) Navigator.pop(context);
+    }
+  
+    //display any errors
+    on FirebaseAuthException catch(e){
+      //pop loading circle
+      Navigator.pop(context);
+      displayMessageToUser(e.code, context)
+    }
   }
 
 
