@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
@@ -15,7 +17,17 @@ class LoginPage extends StatelessWidget {
   final passwordController = TextEditingController();
 
   //sign user in method
-  void signUserIn() {}
+  void login() async {
+    //show loading cicle
+    showDialog(
+        context: context,
+        builder: (context) => const Center(
+          child: CircularProgressIndicator(),
+        )
+    );
+    
+    //pop
+  }
 
 
   @override
