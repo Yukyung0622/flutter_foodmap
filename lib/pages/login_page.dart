@@ -8,11 +8,16 @@ import 'package:contact/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-
 class LoginPage extends StatelessWidget {
   final void Function()? onTap;
 
-  LoginPage({super.key, required this.onTap});
+  const LoginPage({super.key, required this.onTap});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
 
   //text editing controller
   final TextEditingController emailController = TextEditingController();
@@ -36,7 +41,7 @@ class LoginPage extends StatelessWidget {
       );
 
       //pop loading circle
-      if(context.mounted) Navigator.pop(context as BuildContext);
+      if(context.mounted) Navigator.pop(context);
     }
   
     //display any errors
