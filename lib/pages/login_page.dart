@@ -15,8 +15,8 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key, required this.onTap});
 
   //text editing controller
-  final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   //sign user in method
   void login() async {
@@ -32,18 +32,18 @@ class LoginPage extends StatelessWidget {
     try{
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text,
-          password: passwordControler.text,
+          password: passwordController.text,
       );
 
       //pop loading circle
-      if(context.mounted) Navigator.pop(context);
+      if(context.mounted) Navigator.pop(context as BuildContext);
     }
   
     //display any errors
     on FirebaseAuthException catch(e){
       //pop loading circle
-      Navigator.pop(context);
-      displayMessageToUser(e.code, context)
+      Navigator.pop(context as BuildContext);
+      displayMessageToUser(e.code, context as BuildContext)
     }
   }
 
