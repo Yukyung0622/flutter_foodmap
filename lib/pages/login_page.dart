@@ -4,14 +4,13 @@ import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
 import 'package:contact/helper/helper_functions.dart';
-import 'package:contact/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
   final void Function()? onTap;
 
-  const LoginPage({super.key, required this.onTap});
+  LoginPage({super.key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
