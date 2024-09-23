@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
