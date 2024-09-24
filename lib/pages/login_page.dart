@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
 
               //sigh in button
               MyButton(
-                text:"Login"
+                text:"Login",
                 onTap: login,
               ),
 
