@@ -5,10 +5,10 @@ import 'package:contact/helper/helper_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   final void Function()? onTap;
 
-  LoginPage({super.key, required this.onTap});
+  const LoginPage({super.key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
 
   //sign user in method
   void login() async {
-    //show loading cicle
+    //show loading circle
     showDialog(
         context: context,
         builder: (context) => const Center(
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
 
               //username textfield
               MyTextField(
-                controller: usernameController,
+                controller: emailController,
                 hintText: 'Email',
                 obscureText: false,
               ),
@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
 
               //sigh in button
               MyButton(
-                onTap: signUserIn,
+                onTap: onTap,
               ),
 
               SizedBox(height: 30),
