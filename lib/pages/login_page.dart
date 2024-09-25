@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
     on FirebaseAuthException catch(e){
       //pop loading circle
       Navigator.pop(context as BuildContext);
-      displayMessageToUser(e.code, context as BuildContext)
+      displayMessageToUser(e.code, context as BuildContext);
     }
   }
 
@@ -184,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.grey),
                   ),
                   GestureDetector(
-                    onTap: onTap,
+                    onTap: (){},
                     child: const Text(
                       'Register now',
                       style: TextStyle(
