@@ -231,7 +231,7 @@ class RegisterPage extends StatefulWidget {
                       style: TextStyle(color: Colors.grey),
                     ),
                     GestureDetector(
-                        onTap: (){},
+                        onTap: onTap,
                         child: const Text(
                           'Login Here',
                           style: TextStyle(
