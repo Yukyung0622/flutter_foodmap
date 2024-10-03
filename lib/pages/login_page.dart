@@ -184,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.grey),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: onTap,
                     child: const Text(
                       'Register now',
                       style: TextStyle(
