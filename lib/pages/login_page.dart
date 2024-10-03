@@ -20,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  var onTap;
+
   //sign user in method
   void login() async {
     //show loading circle

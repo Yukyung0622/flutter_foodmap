@@ -24,6 +24,8 @@ class RegisterPage extends StatefulWidget {
     final TextEditingController passwordController = TextEditingController();
     final TextEditingController confirmPwController = TextEditingController();
 
+  var onTap;
+
   //register method
   void registerUser() async {
     //show loading circle
