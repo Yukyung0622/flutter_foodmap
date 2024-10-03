@@ -2,6 +2,7 @@ import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
 import 'package:contact/helper/helper_functions.dart';
+import 'package:contact/pages/register_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,6 @@ class _LoginPageState extends State<LoginPage> {
   //text editing controller
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-  var onTap;
 
   //sign user in method
   void login() async {
@@ -186,7 +185,12 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.grey),
                   ),
                   GestureDetector(
-                    onTap: onTap,
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage(onTap: () { },)),
+                      );
+                    },
                     child: const Text(
                       'Register now',
                       style: TextStyle(

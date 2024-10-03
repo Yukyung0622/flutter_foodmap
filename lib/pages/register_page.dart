@@ -24,8 +24,6 @@ class RegisterPage extends StatefulWidget {
     final TextEditingController passwordController = TextEditingController();
     final TextEditingController confirmPwController = TextEditingController();
 
-  var onTap;
-
   //register method
   void registerUser() async {
     //show loading circle
@@ -202,26 +200,6 @@ class RegisterPage extends StatefulWidget {
                 SizedBox(height: 30),
 
                 //kakao,google,naver.apple sign in buttons
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SquareTile(imagePath: 'images/google.png'),
-
-                    SizedBox(width: 15),
-
-                    SquareTile(imagePath: 'images/apple.png'),
-
-                    SizedBox(width: 20),
-
-                    SquareTile(imagePath: 'images/kakao.png'),
-
-                    SizedBox(width: 15),
-
-                    SquareTile(imagePath: 'images/naver.png'),
-                  ],
-                ),
-
-                SizedBox(height: 30),
 
 
                 //not a member? rgister now
@@ -233,7 +211,7 @@ class RegisterPage extends StatefulWidget {
                       style: TextStyle(color: Colors.grey),
                     ),
                     GestureDetector(
-                        onTap: onTap,
+                        onTap: (){},
                         child: const Text(
                           'Login Here',
                           style: TextStyle(
