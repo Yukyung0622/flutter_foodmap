@@ -164,7 +164,7 @@ class RegisterPage extends StatefulWidget {
 
                 //sigh in button
                 MyButton(
-                  onTap: registerUser, text: 'cc',
+                  onTap: registerUser, text: 'register',
                 ),
 
                 SizedBox(height: 10),
