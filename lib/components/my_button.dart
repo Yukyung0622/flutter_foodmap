@@ -23,7 +23,7 @@ class MyButton extends StatelessWidget{
       ),
       child: const Center(
         child: Text(
-          text,
+          '로그인',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
