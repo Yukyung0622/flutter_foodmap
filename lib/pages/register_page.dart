@@ -164,7 +164,7 @@ class RegisterPage extends StatefulWidget {
 
                 //sigh in button
                 MyButton(
-                  onTap: (){}, text: '회원가입',
+                  onTap: registerUser, text: '회원가입',
                 ),
 
                 SizedBox(height: 10),
