@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:contact/components/my_button.dart';
 import 'package:contact/components/my_textfield.dart';
 import 'package:contact/components/square_tile.dart';
+import 'package:contact/pages/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../helper/helper_functions.dart';
@@ -212,7 +213,12 @@ class RegisterPage extends StatefulWidget {
                       style: TextStyle(color: Colors.grey),
                     ),
                     GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage(onTap: (){},)),
+                          );
+                        },
                         child: const Text(
                           'Login Here',
                           style: TextStyle(
